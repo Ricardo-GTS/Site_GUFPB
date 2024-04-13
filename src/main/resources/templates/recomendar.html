@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendação de Cursos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        #header {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        #home-link {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #ff6600; /* Vibrant orange */
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        #home-link:hover {
+            background-color: #cc5200; /* Darker shade of orange */
+            color: #ffffff;
+        }
+        .curso {
+            cursor: pointer;
+            margin: 10px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .curso:hover {
+            background-color: #e9e9e9;
+        }
+        .detalhes {
+            margin-left: 20px;
+            display: none;
+            padding: 8px;
+            background-color: #f8f8f8;
+            border-left: 3px solid #0056b3;
+        }
+        .detalhes p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+    </style>    
+</head>
+<body>
+    <div id="header">
+        <a href="/" id="home-link">Home</a>
+        <h1>Lista de Cursos Recomendados</h1>
+    </div>
+    <div id="cursos"></div>
+
+    <script>
+        function fetchCursos() {
+            const url = '/recomendar/cursos'; // A URL para buscar os cursos
+            const token = localStorage.getItem('authToken'); // Supõe que o token está armazenado no localStorage
+
+            fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Authorization': 'Bearer ' + token,
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    alert('Você ainda não repondeu ao questionario' + response.statusText);
+                    window.location.href = '/questionario';
+                    throw new Error('Falha ao buscar cursos: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(cursos => {
+                const cursosContainer = document.getElementById('cursos');
+                cursosContainer.innerHTML = ''; // Limpa a lista antiga
+
+                cursos.forEach(curso => {
+                    const cursoDiv = document.createElement('div');
+                    cursoDiv.className = 'curso';
+                    cursoDiv.textContent = curso.curso;
+                    cursoDiv.onclick = function() {
+                        this.nextSibling.style.display = this.nextSibling.style.display === 'none' ? 'block' : 'none';
+                    };
+
+                    const detalhesDiv = document.createElement('div');
+                    detalhesDiv.className = 'detalhes';
+                    // Converte "|" para "<br>" para melhor leitura
+                    detalhesDiv.innerHTML = curso.dadosTabela.split('|').join('<p></p>');
+
+                    cursosContainer.appendChild(cursoDiv);
+                    cursosContainer.appendChild(detalhesDiv);
+                });
+            })
+            .catch(error => console.error('Erro:', error));
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchCursos);
+    </script>
+</body>
+</html>

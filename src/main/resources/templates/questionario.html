@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de Áreas de Graduação</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        #home-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            background-color: #007BFF;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: background-color 0.3s, color 0.3s;
+        }
+        #home-link:hover {
+            background-color: #0056b3;
+            color: #ff0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin: 40px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" id="home-link">Home</a>
+    <h1>Descubra sua Área de Graduação Ideal</h1>
+    <form id="quizForm">
+        <div id="questions">Aqui vão as perguntas...</div>
+        <button type="submit">Enviar Respostas</button>
+    </form>
+
+    <script type="module">
+        let token = localStorage.getItem('authToken'); // Substitua isso pelo seu token JWT real
+
+        fetch('quiz.js', {
+            headers: new Headers({
+                'Authorization': `Bearer ${token}`
+            })
+        })
+        .then(response => {
+            if (!response.ok) throw new Error('Failed to load the quiz script');
+            return response.text();
+        })
+        .then(scriptText => {
+            const scriptElement = document.createElement('script');
+            scriptElement.type = 'module';
+            scriptElement.textContent = scriptText;
+            document.body.appendChild(scriptElement);
+        })
+        .catch(error => console.error('Error loading script:', error));
+    </script>
+</body>
+</html>

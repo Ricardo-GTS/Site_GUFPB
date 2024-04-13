@@ -1,0 +1,88 @@
+Para separar os cursos por áreas com base na sua lista, podemos categorizar os centros e cursos associados da seguinte forma:
+
+### Ciências Agrárias e Ambientais
+- **Centro de Ciências Agrárias (CCA):** Agronomia, Ciências Biológicas, Medicina Veterinária, Química, Zootecnia.
+- **Centro de Ciências Humanas Sociais e Agrárias (CCHSA):** Agroecologia, Agroindústria, Ciências Agrárias, Pedagogia.
+
+### Ciências Biológicas e da Saúde
+- **Centro de Biotecnologia (CBIOTEC):** Biotecnologia.
+- **Centro de Ciências da Saúde (CCS):** Biomedicina, Educação Física, Enfermagem, Farmácia, Fisioterapia, Fonoaudiologia, Nutrição, Odontologia, Terapia Ocupacional.
+- **Centro de Ciências Exatas e da Natureza (CCEN):** Ciências Biológicas.
+
+### Ciências Exatas e Tecnologia
+- **Centro de Ciências Aplicadas e Educação (CCAE):** Ciência da Computação, Sistemas de Informação.
+- **Centro de Ciências Exatas e da Natureza (CCEN):** Estatística, Física, Matemática, Química.
+- **Centro de Informática (CI):** Ciência da Computação, Ciência de Dados e Inteligência Artificial, Engenharia da Computação, Matemática Computacional.
+- **Centro de Tecnologia (CT):** Arquitetura e Urbanismo, Engenharia Ambiental, Engenharia Civil, Engenharia de Alimentos, Engenharia de Materiais, Engenharia de Produção, Engenharia Mecânica, Engenharia Química, Química Industrial.
+- **Centro de Energias Alternativas e Renováveis (CEAR):** Engenharia de Energias Renováveis, Engenharia Elétrica.
+
+### Ciências Humanas e Sociais
+- **Centro de Ciências Humanas, Letras e Artes (CCHLA):** Ciências Sociais, Filosofia, História, Letras, Psicologia, Serviço Social, Tradução.
+- **Centro de Ciências Sociais e Aplicadas (CCSA):** Administração, Administração Pública, Arquivologia, Biblioteconomia, Ciência de Dados para Negócios, Ciências Atuariais, Ciências Contábeis, Ciências Econômicas, Gestão Pública, Relações Internacionais.
+
+### Educação e Pedagogia
+- **Centro de Educação (CE):** Ciências das Religiões, Pedagogia, Psicopedagogia.
+
+### Artes e Comunicação
+- **Centro de Comunicação, Turismo e Artes (CCTA):** Artes Visuais, Cinema e Audiovisual, Dança, Jornalismo, Música, Radialismo, Relações Públicas, Teatro, Turismo.
+
+### Ciências Agrárias e Gastronomia
+- **Centro de Tecnologia e Desenvolvimento Regional (CTDR):** Gastronomia, Tecnologia de Alimentos, Tecnologia em Produção Sucroalcooleira.
+
+Cada área reúne cursos com afinidades temáticas ou disciplinares, proporcionando uma organização lógica que pode facilitar para os estudantes a escolha de um campo de interesse. Isso também ajuda a estruturar o conteúdo do site de forma intuitiva, agrupando cursos relacionados sob áreas de conhecimento similares.
+
+
+### Ciências Agrárias e Ambientais
+### Ciências Biológicas e da Saúde
+### Ciências Exatas e Tecnologia
+### Ciências Humanas e Sociais
+### Educação e Pedagogia
+### Artes e Comunicação
+### Ciências Agrárias e Gastronomia
+
+
+
+Pergunta 1: Quando você pensa em seu futuro profissional, o que mais lhe atrai?
+A. Inovar e criar soluções tecnológicas. (Ciências Exatas e Tecnologia +2)
+B. Contribuir para a preservação do meio ambiente. (Ciências Agrárias e Ambientais +2)
+C. Trabalhar no cuidado e bem-estar das pessoas. (Ciências Biológicas e da Saúde +2)
+D. Influenciar e ensinar as próximas gerações. (Educação e Pedagogia +2)
+E. Expressar-se artisticamente e comunicar ideias. (Artes e Comunicação +2)
+F. Explorar a complexidade das relações humanas e da sociedade. (Ciências Humanas e Sociais +2)
+G. Descobrir e experimentar com novos sabores e pratos. (Ciências Agrárias e Gastronomia +2)
+
+Pergunta 2: Que tipo de atividade você acha mais gratificante?
+A. Desenvolver projetos que possam melhorar a vida das pessoas. (Ciências Exatas e Tecnologia +2, Ciências Biológicas e da Saúde +1)
+B. Estudar e interpretar o passado humano e cultural. (Ciências Humanas e Sociais +2)
+C. Cultivar alimentos de forma sustentável. (Ciências Agrárias e Ambientais +2)
+D. Inspirar e educar jovens mentes. (Educação e Pedagogia +2)
+E. Criar e compartilhar histórias através de diversos meios. (Artes e Comunicação +2)
+F. Pesquisar e promover a saúde e bem-estar. (Ciências Biológicas e da Saúde +2)
+G. Gerenciar recursos naturais e produzir de maneira consciente. (Ciências Agrárias e Gastronomia +2)
+
+Pergunta 3: Qual ambiente de trabalho você prefere?
+A. Ambientes dinâmicos e tecnológicos. (Ciências Exatas e Tecnologia +2)
+B. Laboratórios, hospitais ou ambientes ao ar livre relacionados à ciência. (Ciências Biológicas e da Saúde +2)
+C. Salas de aula, bibliotecas ou instituições educacionais. (Educação e Pedagogia +2)
+D. Estúdios, teatros ou espaços criativos. (Artes e Comunicação +2)
+E. Escritórios, espaços de coworking focados em negócios ou projetos sociais. (Ciências Humanas e Sociais +2)
+F. Fazendas, florestas ou laboratórios de pesquisa agrícola. (Ciências Agrárias e Ambientais +2)
+G. Cozinhas de restaurantes, fazendas ou indústrias alimentícias. (Ciências Agrárias e Gastronomia +2)
+
+Pergunta 4: Como você prefere passar seu tempo livre?
+A. Programando, construindo gadgets ou lendo sobre tecnologia. (Ciências Exatas e Tecnologia +2)
+B. Lendo sobre nutrição, fazendo exercícios ou explorando temas de saúde. (Ciências Biológicas e da Saúde +2)
+C. Jardinando, acampando ou engajando-se em atividades ao ar livre. (Ciências Agrárias e Ambientais +2)
+D. Desenhando, pintando ou assistindo a filmes e peças. (Artes e Comunicação +2)
+E. Participando de grupos de estudo, ensinando ou aprendendo algo novo. (Educação e Pedagogia +2)
+F. Lendo livros, escrevendo ou participando de debates. (Ciências Humanas e Sociais +2)
+G. Cozinhando, visitando mercados locais ou experimentando com novos ingredientes. (Ciências Agrárias e Gastronomia +2)
+
+Pergunta 5: O que você considera mais importante em sua carreira?
+A. Inovação e contribuição para o avanço da tecnologia. (Ciências Exatas e Tecnologia +2)
+B. Ajuda ao próximo e contribuição para uma sociedade mais saudável. (Ciências Biológicas e da Saúde +2)
+C. Contribuição para a sustentabilidade e preservação ambiental. (Ciências Agrárias e Ambientais +2)
+D. Influenciar positivamente as pessoas através da educação. (Educação e Pedagogia +2)
+E. Expressão criativa e impacto cultural. (Artes e Comunicação +2)
+F. Entendimento e melhoria das estruturas sociais. (Ciências Humanas e Sociais +2)
+G. Promover uma alimentação saudável e sustentável. (Ciências Agrárias e Gastronomia +2)

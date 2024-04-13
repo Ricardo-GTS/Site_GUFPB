@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUFPB - Bem Vindo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 40px;
+            background: #f4f4f9; /* Cor de fundo mais clara para um look moderno */
+        }
+        h1, h2 {
+            color: #007bff;
+        }
+        .buttons-container {
+            margin-top: 20px;
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .button {
+            padding: 15px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            outline: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+        }
+        #logoffButton {
+            display: none; /* Escondido por padrão */
+        }
+    </style>
+</head>
+<body>
+    <h1>Bem Vindo ao GUFPB</h1>
+    <h2>Seu guia de Cursos da UFPB</h2>
+
+    <div class="buttons-container">
+        <a href="/recomendar/todos" class="button">Consultar Cursos</a>
+        <a href="/recomendar" class="button" id="recomendarLink" >Cursos Recomendados</a>
+        <a href="/questionario" class="button" id="questionarioLink">Melhor Curso para mim ?</a>
+        <a href="/auth/login" class="button">Login</a>
+        <button id="logoffButton" class="button">Logoff</button> <!-- Botão de Logoff -->
+    </div>
+
+    <script>
+        const logoffButton = document.getElementById('logoffButton');
+        let token = localStorage.getItem('authToken');
+
+        function validateToken() {
+            if (!token) {
+                logoffButton.style.display = 'none';
+                document.querySelector('a[href="/auth/login"]').style.display = 'inline-block';
+                return;
+            }
+
+            fetch('/api/validate_token', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (!response.ok) throw new Error('Token inválido ou expirado');
+                logoffButton.style.display = 'inline-block';
+                document.querySelector('a[href="/auth/login"]').style.display = 'none';
+            })
+            .catch(error => {
+                console.error(error.message);
+                localStorage.removeItem('authToken');
+                window.location.href = '/';
+            });
+        }
+
+        validateToken();
+
+        logoffButton.addEventListener('click', function() {
+            localStorage.removeItem('authToken');
+            alert('Você foi deslogado com sucesso!');
+            window.location.href = '/';
+        });
+
+        document.getElementById('questionarioLink').addEventListener('click', function(event) {
+            if (!token) {
+                event.preventDefault();
+                alert('Você não está autenticado. Por favor, faça login primeiro.');
+                window.location.href = '/auth/login';
+            }
+        });
+        
+        document.getElementById('recomendarLink').addEventListener('click', function(event) {
+            if (!token) {
+                event.preventDefault();
+                alert('Você não está autenticado. Por favor, faça login primeiro.');
+                window.location.href = '/auth/login';
+            }
+        });
+    </script>
+</body>
+</html>
