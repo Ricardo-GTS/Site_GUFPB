@@ -19,6 +19,8 @@ public class CursoService {
 
     @PostConstruct
     public void readCSVAndSaveData() {
+        cursoRepository.deleteAll();
+
         InputStream is = getClass().getResourceAsStream("/cursos_info.csv");
         try (Reader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
              CSVParser csvParser = new CSVParser(reader, CSVFormat.DEFAULT
